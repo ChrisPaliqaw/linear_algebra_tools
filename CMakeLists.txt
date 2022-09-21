@@ -18,7 +18,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # tell CMake to add this directory to the target's include path
 include_directories(include/${PROJECT_NAME})
@@ -41,7 +41,7 @@ install(TARGETS
 ament_export_targets(${LIBRARY_NAME} HAS_LIBRARY_TARGET)
 
 ament_target_dependencies(${LIBRARY_NAME}
-	rclcpp
+	tf2_geometry_msgs
 )
 
 # install the include/my_cpp_library directory to the install/include/my_cpp_library
