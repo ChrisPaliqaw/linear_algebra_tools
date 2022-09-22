@@ -7,7 +7,7 @@
 namespace linear_algebra_utilities {
 
 geometry_msgs::msg::Vector3 EulerFromQuaternion(tf2::Quaternion q);
-double Magnitude(geometry_msgs::msg::Vector3 v3);
+float Magnitude(geometry_msgs::msg::Vector3 v3);
 
 } // namespace linear_algebra_utilities
 #endif // LINEAR_ALGEBRA_UTILITIES_LINEAR_ALGEBRA_HPP_

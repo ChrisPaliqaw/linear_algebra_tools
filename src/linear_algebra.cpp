@@ -61,9 +61,14 @@ geometry_msgs::msg::Vector3 EulerFromQuaternion(tf2::Quaternion q)
     return v3;
 }
 
-double Magnitude(geometry_msgs::msg::Vector3 v3)
+float Magnitude(geometry_msgs::msg::Vector3 v3)
 {
-    return sqrt(v3.x*v3.x + v3.y*v3.y + v3.z*v3.z);
+    float raised_to = 2.0f;
+    return sqrt(
+      pow(v3.x, raised_to) +
+      pow(v3.y, raised_to) +
+      pow(v3.z, raised_to));
+
 }
 
 } // namespace linear_algebra_utilities
