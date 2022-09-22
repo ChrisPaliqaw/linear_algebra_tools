@@ -30,7 +30,7 @@ namespace linear_algebra_utilities
 {
 
 // Code adapted from https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
-geometry_msgs::msg::Vector3 euler_from_quaternion(tf2::Quaternion q)
+geometry_msgs::msg::Vector3 EulerFromQuaternion(tf2::Quaternion q)
 {
     geometry_msgs::msg::Vector3 v3;
 
@@ -61,7 +61,7 @@ geometry_msgs::msg::Vector3 euler_from_quaternion(tf2::Quaternion q)
     return v3;
 }
 
-double magnitude(geometry_msgs::msg::Vector3 v3)
+double Magnitude(geometry_msgs::msg::Vector3 v3)
 {
     return sqrt(v3.x*v3.x + v3.y*v3.y + v3.z*v3.z);
 }

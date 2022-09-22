@@ -14,7 +14,7 @@ class LinearAlgebraToolsTest : public ::testing::Test {
 
   LinearAlgebraToolsTest() {
     q.setRPY(roll, pitch, yaw);
-    v3 = euler_from_quaternion(q);
+    v3 = EulerFromQuaternion(q);
   }
 
   ~LinearAlgebraToolsTest() override {
@@ -37,9 +37,9 @@ class LinearAlgebraToolsTest : public ::testing::Test {
   // Class members declared here can be used by all tests in the test suite
   // for Foo.
   float close_enough = 0.001;
-  float roll = 0.1f;
-  float pitch = 0.2f;
-  float yaw = 0.3f;
+  float roll = 0.11f;
+  float pitch = 0.21f;
+  float yaw = 0.31f;
   geometry_msgs::msg::Vector3 v3;
   tf2::Quaternion q;
 };

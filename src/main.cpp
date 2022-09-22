@@ -8,19 +8,19 @@
 void AssertCloseEnough(float lhs, float rhs)
 {
   float close_enough = 0.001;
-  assert(abs(lhs - rhs) <= close_enough);
+  assert(fabs(lhs - rhs) <= close_enough);
 }
 
 int main()
 {
-  float roll = 0.1f;
-  float pitch = 0.2f;
-  float yaw = 0.3f;
+  float roll = 0.11f;
+  float pitch = 0.21f;
+  float yaw = 0.31f;
   
   tf2::Quaternion q;
   q.setRPY(roll, pitch, yaw);
   geometry_msgs::msg::Vector3 v3 =
-    linear_algebra_utilities::euler_from_quaternion(q);
+    linear_algebra_utilities::EulerFromQuaternion(q);
   std::cout << v3.x << std::endl;
   std::cout << v3.y << std::endl;
   std::cout << v3.z << std::endl;
