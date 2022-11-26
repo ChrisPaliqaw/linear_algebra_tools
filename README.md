@@ -1,5 +1,5 @@
 # linear_algebra_tools
-Demonstrates the creation of a simple ROS2 package containing a math library, and testing it with GTest. Developed using a git feature branch
+Demonstrates the creation of a simple ROS2 package containing a math library, and testing it with *GTest*. Developed using a *git* feature branch
 
 # Development process
 - Checked the project out to ros2_ws
